@@ -158,14 +158,14 @@ def get_choice(game):
 
 def main():
     args = parser.parse_args()
+    print('Welcome! (q to quit)')
     game = Game(args)
     while game.is_running:
         game.display()
         try:
             choice = get_choice(game)
         except ValueError as e:
-            print('ERROR: %s' % e)
-            print('')
+            print('ERROR: %s\n' % e)
             continue
         except UserQuitsError:
             print('')
