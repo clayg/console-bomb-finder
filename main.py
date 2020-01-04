@@ -86,7 +86,7 @@ class Game(object):
 
     def display(self, final=False):
         if final:
-            self.running = False
+            self.is_running = False
             for row in self.board:
                 for spot in row:
                     spot.display()
@@ -147,9 +147,6 @@ def get_choice(game):
         raise UserQuitsError()
     if choice.lower() == 'q':
         raise UserQuitsError()
-    if choice.lower() == 'd':
-        print('DEBUG!!!')
-        game.display(final=True)
     try:
         x, y = [int(p.strip()) for p in choice.split(',')]
     except ValueError:
