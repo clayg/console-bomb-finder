@@ -24,7 +24,7 @@ parser.add_argument('-d', '--depth', type=int_in_range(0, 10), default=5,
 parser.add_argument('--inverse-input', action='store_true',
                     help='Give input in x, -y coords instead of row, column')
 parser.add_argument('-n', '--number-of-bombs', type=int_in_range(0, 100),
-                    default=10, help='The number of bombs on the board')
+                    default=5, help='The number of bombs on the board')
 
 
 class Spot(object):
